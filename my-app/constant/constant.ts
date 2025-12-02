@@ -1,0 +1,27 @@
+export const navLinks = [
+    {
+        id:1,
+        url:"#",
+        label:"Home"
+    },
+    {
+        id:2,
+        url:"#",
+        label:"Servicios"
+    },
+    {
+        id:3,
+        url:"#",
+        label:"Funciones"
+    },
+    {
+        id:4,
+        url:"#",
+        label:"Guia"
+    },
+    {
+        id:5,
+        url:"#",
+        label:"Contacto"
+    }
+];

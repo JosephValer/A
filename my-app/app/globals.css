@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+
+@layer components {
+  .bg-clip{
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 83%, 0 100% , 0% 60%, 0 0);
+  }
+  .bg-clip-alt {
+    clip-path: polygon(0 28%, 60% 28%, 100% 100%, 0% 100%);
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark*));
+
+:root {
+  --color-regal-blue: #243c5a;
+  --color-regal-blue2: #006DB2;
+  --color-regal-orange: #eb9707;
+}
+
+/* Botón con color personalizado */
+.btn-custom {
+  background-color: #243c5a;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #1e3548; /* más oscuro en hover */
+  color: white;
+}
+
+.dark .btn-custom {
+  background-color: #243c5a;
+  color: white;
+}
+
+.dark .btn-custom:hover {
+  background-color: #1e3548;
+  color: white;
+}
+/* Clases para tarjetas adaptativas */
+.card-bg {
+  background-color: white;
+  border-color: #f3f4f6;
+}
+
+.dark .card-bg {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.text-adaptive {
+  color: #111827;
+}
+
+.dark .text-adaptive {
+  color: #f9fafb;
+}
+
+.text-adaptive-secondary {
+  color: #6b7280;
+}
+
+.dark .text-adaptive-secondary {
+  color: #d1d5db;
+}
+
+/* Clases para textos adaptativos */
+.text-adaptive {
+  color: #1F2937; /* gris oscuro para modo claro */
+}
+
+.dark .text-adaptive {
+  color: #F9FAFB; /* blanco para modo oscuro */
+}
+
+.text-adaptive-secondary {
+  color: #4B5563; /* gris medio para modo claro */
+}
+
+.dark .text-adaptive-secondary {
+  color: #D1D5DB; /* gris claro para modo oscuro */
+}
+
+/* Iconos adaptativos */
+.icon-adaptive {
+  color: var(--color-regal-blue); /* azul para modo claro */
+}
+
+.dark .icon-adaptive {
+  color: var(--icon-color); /* blanco para modo oscuro */
+}
+
+@layer components {
+  .Footer__link {
+    @apply text-white dark:text-white text-sm cursor-pointer w-fit hover:text-gray-300;
+  }
+}
